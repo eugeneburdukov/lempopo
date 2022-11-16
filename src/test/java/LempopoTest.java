@@ -3,6 +3,10 @@ import io.qameta.allure.Step;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 public class LempopoTest {
 
     @Test(priority = 1, description = "Limpopo testing 1")
@@ -26,5 +30,21 @@ public class LempopoTest {
         checkSumStep(5, 5, 11);
     }
 
+    @Attachment
+    public static byte[] getBytes(String resourceName) throws IOException {
+        return Files.readAllBytes(Paths.get("src/main/resources", resourceName));
+    }
 
+    @Step("Проверка эквивалентности строки {str1} строке {str2}")
+    public static void checkStringEqualsStep(String str1, String str2) throws IOException {
+        Assert.assertTrue(str1.equals(str2), "Строки не эквивалентны");
+        getBytes("picture.jpg");
+        getBytes("text.txt");
+    }
+
+    @Test
+    public void simpleTest4() throws IOException {
+        String darkSouls = "Dark souls 3";
+        checkStringEqualsStep(darkSouls, darkSouls);
+    }
 }
