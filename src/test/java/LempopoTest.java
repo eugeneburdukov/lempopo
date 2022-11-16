@@ -38,7 +38,7 @@ public class LempopoTest {
     @Step("Проверка эквивалентности строки {str1} строке {str2}")
     public static void checkStringEqualsStep(String str1, String str2) throws IOException {
         Assert.assertTrue(str1.equals(str2), "Строки не эквивалентны");
-        getBytes("picture.jpg");
+        getBytes("witcherpicture.png");
         getBytes("text.txt");
     }
 
