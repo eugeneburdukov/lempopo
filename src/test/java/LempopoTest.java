@@ -35,16 +35,14 @@ public class LempopoTest {
         return Files.readAllBytes(Paths.get("src/main/resources", resourceName));
     }
 
-    @Step("Проверка эквивалентности строки {str1} строке {str2}")
-    public static void checkStringEqualsStep(String str1, String str2) throws IOException {
-        Assert.assertTrue(str1.equals(str2), "Строки не эквивалентны");
+    @Step("Let's show files:")
+    public static void checkStringEqualsStep() throws IOException {
         getBytes("witcherpicture.png");
         getBytes("text.txt");
     }
 
     @Test
     public void simpleTest4() throws IOException {
-        String darkSouls = "Dark souls 3";
-        checkStringEqualsStep(darkSouls, darkSouls);
+        checkStringEqualsStep();
     }
 }
