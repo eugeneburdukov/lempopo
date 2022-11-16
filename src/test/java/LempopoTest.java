@@ -41,7 +41,7 @@ public class LempopoTest {
         getBytes("text.txt");
     }
 
-    @Test(priority = 2, description = "Are files pulled successfully?")
+    @Test(description = "Are files pulled successfully?")
     public void simpleTest4() throws IOException {
         checkStringEqualsStep();
     }
