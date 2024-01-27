@@ -25,7 +25,7 @@ public class LempopoTest {
 
     @Test
     public void simpleTest2() {
-        checkSumStep(3, 3, 7);
+        checkSumStep(1, 3, 7);
         checkSumStep(5, 4, 20);
         checkSumStep(5, 5, 13);
     }
