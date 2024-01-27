@@ -11,11 +11,11 @@ public class LempopoTest {
 
     @Test(priority = 1, description = "Limpopo testing 1")
     public void doConcat(){
-        Assert.assertEquals("review","review");
+        Assert.assertEquals("revie","review");
     }
     @Test(priority = 2, description = "Limpopo testing 2")
     public void doReview(){
-        Assert.assertEquals("epiphany","epiphany");
+        Assert.assertEquals("epiphan","epiphany");
     }
 
     @Step
@@ -25,9 +25,9 @@ public class LempopoTest {
 
     @Test
     public void simpleTest2() {
-        checkSumStep(3, 3, 6);
-        checkSumStep(5, 4, 9);
-        checkSumStep(5, 5, 10);
+        checkSumStep(3, 3, 7);
+        checkSumStep(5, 4, 20);
+        checkSumStep(5, 5, 13);
     }
 
     @Attachment
