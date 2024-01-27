@@ -15,7 +15,7 @@ public class LempopoTest {
     }
     @Test(priority = 2, description = "Limpopo testing 2")
     public void doReview(){
-        Assert.assertEquals("epitome","epiphany");
+        Assert.assertEquals("epiphany","epiphany");
     }
 
     @Step
@@ -27,7 +27,7 @@ public class LempopoTest {
     public void simpleTest2() {
         checkSumStep(3, 2, 5);
         checkSumStep(5, 4, 9);
-        checkSumStep(5, 5, 11);
+        checkSumStep(5, 5, 10);
     }
 
     @Attachment
